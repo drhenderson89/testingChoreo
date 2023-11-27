@@ -1,0 +1,13 @@
+openapi: 3.0.1
+info:
+  title: choreotest
+  description: API Definition of choreotest
+  version: 1.0.0
+servers:
+- url: http://localhost:8290/choreo
+paths:
+  /:
+    get:
+      responses:
+        default:
+          description: Default response

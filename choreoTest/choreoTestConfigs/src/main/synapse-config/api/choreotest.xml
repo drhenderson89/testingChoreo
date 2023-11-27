@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/choreo" name="choreotest" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET">
+        <inSequence>
+            <payloadFactory media-type="json">
+                <format>{&#xd;
+            "Identifier": "T1_South_Kiosks",&#xd;
+            "ConcourseFacility": {&#xd;
+                "TerminalFacility": {&#xd;
+                    "AirportFacility": {&#xd;
+                        "IcaoCode": "KMSP"&#xd;
+                    }&#xd;
+                }&#xd;
+            }&#xd;
+        }</format>
+                <args/>
+            </payloadFactory>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>
