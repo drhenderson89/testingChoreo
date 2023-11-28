@@ -1,9 +1,0 @@
----
-apiVersion: "wso2.com/v1alpha2"
-kind: "Integration"
-metadata:
-  name: "testchoreo"
-spec:
-  image: "dhenderson89/choreotest:1.0.0-SNAPSHOT"
-  deploySpec:
-    minReplicas: 1
