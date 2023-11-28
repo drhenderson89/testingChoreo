@@ -9,10 +9,6 @@
   <name>choreoTest</name>
   <description>choreoTest</description>
   <modules>
-    <module>choreoTestRegistryResources</module>
-    <module>choreoTestConnectorExporter</module>
-    <module>choreoTestDataSourceConfigs</module>
-    <module>choreoTestDataServiceConfigs</module>
     <module>choreoTestConfigs</module>
     <module>choreoTestCompositeExporter</module>
   </modules>
@@ -58,30 +54,6 @@
     <profile>
       <id>Solution</id>
       <build />
-    </profile>
-    <profile>
-      <id>Docker</id>
-      <build />
-      <modules>
-        <module>choreoTestDockerExporter</module>
-      </modules>
-    </profile>
-    <profile>
-      <id>Kubernetes</id>
-      <build />
-      <modules>
-        <module>choreoTestKubernetesExporter</module>
-      </modules>
-    </profile>
-    <profile>
-      <activation>
-        <activeByDefault>true</activeByDefault>
-      </activation>
-      <build />
-      <modules>
-        <module>choreoTestDockerExporter</module>
-        <module>choreoTestKubernetesExporter</module>
-      </modules>
     </profile>
   </profiles>
 </project>
