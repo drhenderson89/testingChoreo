@@ -1,7 +1,7 @@
 ---
 key: "choreotest-1.0.0"
-name : "choreotest"
-displayName : "choreotest"
+name : "choreoStaticJSON"
+displayName : "choreoStaticJSON"
 description: "Sample API"
 version: "1.0.0"
 serviceUrl: "https://{MI_HOST}:{MI_PORT}/singleJSONResponse"
