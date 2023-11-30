@@ -1,0 +1,8 @@
+version: 1.0
+endpoints:
+  - name: choreoStaticJSON
+    port: 8290
+    type: REST
+    networkVisibility: Public
+    context: /singleJSONResponse
+    schemaFilePath: choreo_openapi.yaml

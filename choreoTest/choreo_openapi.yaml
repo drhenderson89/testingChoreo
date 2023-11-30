@@ -1,12 +1,12 @@
 openapi: 3.0.1
 info:
-  title: choreotest
-  description: API Definition of choreotest
+  title: choreo
+  description: API Definition of choreo test endpoints
   version: 1.0.0
 servers:
 - url: http://localhost:8290/singleJSONResponse
 paths:
-  /:
+  /integration:
     get:
       responses:
         default:
