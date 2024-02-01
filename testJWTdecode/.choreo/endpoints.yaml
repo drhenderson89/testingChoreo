@@ -1,0 +1,8 @@
+version: 1.0
+endpoints:
+  - name: JWThandling
+    port: 8290
+    type: REST
+    networkVisibility: Public
+    context: /testjwt
+    schemaFilePath: choreo_openapi.yaml

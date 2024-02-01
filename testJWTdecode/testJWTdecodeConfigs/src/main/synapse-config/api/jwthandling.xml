@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/testjwt" name="jwthandling" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET">
+        <inSequence>
+            <class name="com.rockportsoft.jwthandler.mediator.Jwtdecoder"/>
+            <log level="custom" separator=",">
+                <property expression="$ctx:jwt-body" name="Class output"/>
+            </log>
+            <script description="Display Variables" language="js"><![CDATA[var keySet = mc.getPropertyKeySet();
+var i = 1;
+var it = keySet.iterator();       
+var log = "\n\r";
+while(it.hasNext()){
+	var prop = it.next();
+	log += i + ": " + prop + " = " + mc.getProperty(prop)+"\n\r";
+	i++;
+}
+mc.getServiceLog().info(log);]]></script>
+            <payloadFactory media-type="text">
+                <format>$1</format>
+                <args>
+                    <arg evaluator="json" expression="$ctx:jwt-body"/>
+                </args>
+            </payloadFactory>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>
