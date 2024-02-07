@@ -3,7 +3,7 @@
     <resource methods="GET">
         <inSequence>
             <log level="full" separator=","/>
-            <property expression="$trp:x-jwt-header" name="JWT_HEADER" scope="default" type="STRING"/>
+            <property expression="$trp:x-jwt-assertion" name="JWT_HEADER" scope="default" type="STRING"/>
             <class name="com.rockportsoft.jwthandler.mediator.Jwtdecoder"/>
             <log level="custom" separator=",">
                 <property expression="$ctx:jwt-body" name="Class output"/>
